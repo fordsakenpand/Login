@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <h1>Crear cuenta</h1>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <h3>Introduzca nombre de usuario</h3>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]='formulariologin'>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirmar contraseña</ion-label>
+          <ion-input formControlName="confimacionpassword" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <hr>
+      <ion-button (click)="crear()">
+        Crear cuenta
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
